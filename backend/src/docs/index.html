@@ -526,6 +526,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_책_이름이_포함되는_책_대여_목록_조회_http_response">HTTP response</a></li>
 </ul>
 </li>
+<li><a href="#_책_대여_신청">책 대여 신청</a>
+<ul class="sectlevel3">
+<li><a href="#_책_대여_신청_http_request">HTTP request</a></li>
+<li><a href="#_책_대여_신청_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_책_반납">책 반납</a>
+<ul class="sectlevel3">
+<li><a href="#_책_반납_http_request">HTTP request</a></li>
+<li><a href="#_책_반납_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_내가_borrow한_도서_대여_목록_조회">내가 borrow한 도서 대여 목록 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_내가_borrow한_도서_대여_목록_조회_http_request">HTTP request</a></li>
+<li><a href="#_내가_borrow한_도서_대여_목록_조회_http_response">HTTP response</a></li>
+</ul>
+</li>
+<li><a href="#_내가_lend한_도서_목록_조회">내가 lend한 도서 목록 조회</a>
+<ul class="sectlevel3">
+<li><a href="#_내가_lend한_도서_목록_조회_http_request">HTTP request</a></li>
+<li><a href="#_내가_lend한_도서_목록_조회_http_response">HTTP response</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_member">Member</a>
@@ -713,18 +737,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /book-reviews HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 320
+Content-Length: 328
 Host: 223.255.205.62:30505
 
 {
   "book" : {
-    "isbn" : "798789789978",
+    "isbn" : "9791188116065",
     "title" : "미움 받을 용기",
     "author" : "독도독도",
     "publisher" : "test_b64e856b1458",
-    "imageUrl" : "aaa.bb.com",
+    "imageUrl" : "http://aaa.bb.com",
     "price" : 62,
-    "publishAt" : "2023-02-14"
+    "publishAt" : "2023-02-27"
   },
   "title" : "제목1",
   "content" : "내용1",
@@ -745,7 +769,7 @@ Content-Length: 403
 {
   "id" : 1,
   "writer" : {
-    "id" : "3db26c98-182a-4c4e-8ed5-afed45b3fbf6",
+    "id" : "03e2eb95-e450-4232-9990-0617d4f93fef",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -760,7 +784,7 @@ Content-Length: 403
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.398808"
+  "createdAt" : "2023-02-27T11:35:33.905928"
 }</code></pre>
 </div>
 </div>
@@ -788,7 +812,7 @@ Content-Length: 1302
 [ {
   "id" : 1,
   "writer" : {
-    "id" : "fea34399-8146-409b-aaf3-e03c85b4667f",
+    "id" : "9580d7ed-caeb-4d85-b1b9-f7f7aa2bb175",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -800,11 +824,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.422232"
+  "createdAt" : "2023-02-27T11:35:33.935648"
 }, {
   "id" : 2,
   "writer" : {
-    "id" : "cbf8220f-8792-464b-bebe-4d4a1ca915f1",
+    "id" : "e633ceae-3b1a-4a39-bd6a-552fb5e91393",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -816,11 +840,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.422268"
+  "createdAt" : "2023-02-27T11:35:33.935662"
 }, {
   "id" : 3,
   "writer" : {
-    "id" : "1bf9f22d-2188-4d5e-a957-eb32c27e9a42",
+    "id" : "3ffcda70-f369-4cba-b017-ad6e74f7d243",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -832,11 +856,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.422282"
+  "createdAt" : "2023-02-27T11:35:33.935679"
 }, {
   "id" : 4,
   "writer" : {
-    "id" : "482aa14c-cba1-4401-a834-e7726983f835",
+    "id" : "ce8be30a-ebbc-45e8-ba86-6f9855092466",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -848,7 +872,7 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.422294"
+  "createdAt" : "2023-02-27T11:35:33.935691"
 } ]</code></pre>
 </div>
 </div>
@@ -876,7 +900,7 @@ Content-Length: 1302
 [ {
   "id" : 1,
   "writer" : {
-    "id" : "697bc891-3562-44b1-81d1-bc49977a3a8f",
+    "id" : "211e2e72-afdc-4aa5-b36c-4fcab393d3a9",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -888,11 +912,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.411751"
+  "createdAt" : "2023-02-27T11:35:33.922602"
 }, {
   "id" : 2,
   "writer" : {
-    "id" : "9d7941ad-de1d-4d77-920e-0943304aed47",
+    "id" : "a566c0e1-8ddf-4266-a217-81633bd2126f",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -904,11 +928,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.411778"
+  "createdAt" : "2023-02-27T11:35:33.922669"
 }, {
   "id" : 3,
   "writer" : {
-    "id" : "9cfbc41f-d819-4e32-86f7-7c97ecbe6808",
+    "id" : "bce6e4c4-7527-4343-b941-85a39b4dcc94",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -920,11 +944,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.411792"
+  "createdAt" : "2023-02-27T11:35:33.922684"
 }, {
   "id" : 4,
   "writer" : {
-    "id" : "627cd06d-452e-4b33-813b-18cb029a1d08",
+    "id" : "428448b0-1542-459f-9e24-b9c1b4058fb7",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -936,7 +960,7 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.411805"
+  "createdAt" : "2023-02-27T11:35:33.922697"
 } ]</code></pre>
 </div>
 </div>
@@ -964,7 +988,7 @@ Content-Length: 1302
 [ {
   "id" : 1,
   "writer" : {
-    "id" : "87d81f00-bf85-438e-9ef1-b2d7c1c378f3",
+    "id" : "04e0b16d-b9f8-4330-b993-90474cb96837",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -976,11 +1000,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.443396"
+  "createdAt" : "2023-02-27T11:35:33.952758"
 }, {
   "id" : 2,
   "writer" : {
-    "id" : "f7da7e22-797b-421a-8c35-de96b3f88059",
+    "id" : "70a485b7-50d1-47c5-8fda-5e7620c8a1d7",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -992,11 +1016,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.443427"
+  "createdAt" : "2023-02-27T11:35:33.952782"
 }, {
   "id" : 3,
   "writer" : {
-    "id" : "675fac3d-57a2-4c1c-8f32-557a37dd2605",
+    "id" : "4ba30b93-c3e0-4dd7-8418-d52bd0cf072c",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -1008,11 +1032,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.443432"
+  "createdAt" : "2023-02-27T11:35:33.952794"
 }, {
   "id" : 4,
   "writer" : {
-    "id" : "56ff9620-7bee-4565-88a5-78b8f5df6207",
+    "id" : "282ac887-bdfe-4562-b59d-b79f0a153e06",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -1024,7 +1048,7 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.443445"
+  "createdAt" : "2023-02-27T11:35:33.952798"
 } ]</code></pre>
 </div>
 </div>
@@ -1047,12 +1071,12 @@ Host: 223.255.205.62:30505</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 1302
+Content-Length: 1301
 
 [ {
   "id" : 1,
   "writer" : {
-    "id" : "7401f1d2-081e-4930-a1f6-893c1867fcac",
+    "id" : "9a086d94-c15a-42da-bde6-200dc5ac95e2",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -1064,11 +1088,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.433925"
+  "createdAt" : "2023-02-27T11:35:33.944003"
 }, {
   "id" : 2,
   "writer" : {
-    "id" : "d9914e65-273a-4a2a-b064-c7ef6167b6ee",
+    "id" : "8e008eaf-0336-4827-a12f-481aa460738b",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -1080,11 +1104,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.433945"
+  "createdAt" : "2023-02-27T11:35:33.94403"
 }, {
   "id" : 3,
   "writer" : {
-    "id" : "1a10aa24-ccb2-4be5-9a05-f8c8c0371413",
+    "id" : "93e2820f-9694-45b2-bf63-029cfd17f0e1",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -1096,11 +1120,11 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.433965"
+  "createdAt" : "2023-02-27T11:35:33.944035"
 }, {
   "id" : 4,
   "writer" : {
-    "id" : "9998b2b5-f749-47d9-9dea-a19ab633bd52",
+    "id" : "c6353f0f-ab74-4c1c-abd0-636a743ab29a",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -1112,7 +1136,7 @@ Content-Length: 1302
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.433978"
+  "createdAt" : "2023-02-27T11:35:33.944048"
 } ]</code></pre>
 </div>
 </div>
@@ -1140,7 +1164,7 @@ Content-Length: 403
 {
   "id" : 1,
   "writer" : {
-    "id" : "f967e047-9ebf-4a5c-bdbe-d92679e4896b",
+    "id" : "d1f6283b-c99b-41c9-bd52-b6a5e338f580",
     "name" : "작성자"
   },
   "title" : "제목",
@@ -1155,7 +1179,7 @@ Content-Length: 403
   "likeCount" : 5,
   "score" : 5,
   "difficulty" : 5,
-  "createdAt" : "2023-02-14T11:39:15.361522"
+  "createdAt" : "2023-02-27T11:35:33.882198"
 }</code></pre>
 </div>
 </div>
@@ -1169,18 +1193,18 @@ Content-Length: 403
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">PUT /book-reviews/5 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 320
+Content-Length: 328
 Host: 223.255.205.62:30505
 
 {
   "book" : {
-    "isbn" : "798789789978",
+    "isbn" : "9791188116065",
     "title" : "미움 받을 용기",
     "author" : "독도독도",
     "publisher" : "test_b64e856b1458",
-    "imageUrl" : "aaa.bb.com",
+    "imageUrl" : "http://aaa.bb.com",
     "price" : 62,
-    "publishAt" : "2023-02-14"
+    "publishAt" : "2023-02-27"
   },
   "title" : "제목1",
   "content" : "내용1",
@@ -1249,40 +1273,40 @@ Host: 223.255.205.62:30505</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 794
+Content-Length: 786
 
 [ {
   "id" : 5,
   "writer" : {
-    "uuid" : "f0a5fcce-7fb1-4953-9490-d3ef282ad3f9",
+    "id" : "7e6225b8-7e71-4300-9f92-457bcbcf918f",
     "name" : "작성자 이름"
   },
   "content" : "댓글 내용",
-  "createdAt" : "2023-02-14T11:39:13.368674"
+  "createdAt" : "2023-02-27T11:35:31.743132"
 }, {
   "id" : 6,
   "writer" : {
-    "uuid" : "021861c6-658d-471b-ba2e-5bf233418188",
+    "id" : "ad48901b-c1a4-4406-8e90-401a5111875b",
     "name" : "작성자 이름"
   },
   "content" : "댓글 내용",
-  "createdAt" : "2023-02-14T11:39:13.368706"
+  "createdAt" : "2023-02-27T11:35:31.743173"
 }, {
   "id" : 7,
   "writer" : {
-    "uuid" : "b04caf00-989a-431b-b230-0bc47ef9549e",
+    "id" : "a6961fbb-4dc4-4beb-a98d-9b71b0b6481f",
     "name" : "작성자 이름"
   },
   "content" : "댓글 내용",
-  "createdAt" : "2023-02-14T11:39:13.368719"
+  "createdAt" : "2023-02-27T11:35:31.743188"
 }, {
   "id" : 8,
   "writer" : {
-    "uuid" : "851d6c91-8940-4600-b217-2582e9071f87",
+    "id" : "5af4d2f7-4ab3-468e-8a02-994092cd318e",
     "name" : "작성자 이름"
   },
   "content" : "댓글 내용",
-  "createdAt" : "2023-02-14T11:39:13.368731"
+  "createdAt" : "2023-02-27T11:35:31.743201"
 } ]</code></pre>
 </div>
 </div>
@@ -1301,21 +1325,22 @@ Content-Length: 794
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /book-borrows HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 290
+Content-Length: 334
 Host: 223.255.205.62:30505
 
 {
   "book" : {
-    "isbn" : "798789789978",
+    "isbn" : "9791188116065",
     "title" : "미움 받을 용기",
     "author" : "독도독도",
     "publisher" : "test_b64e856b1458",
-    "imageUrl" : "aaa.bb.com",
+    "imageUrl" : "http://aaa.bb.com",
     "price" : 62,
-    "publishAt" : "2023-02-14"
+    "publishAt" : "2023-02-27"
   },
   "location" : "인천",
-  "endDate" : "2023-02-14"
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
 }</code></pre>
 </div>
 </div>
@@ -1326,7 +1351,7 @@ Host: 223.255.205.62:30505
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 201 Created
 Content-Type: application/json;charset=UTF-8
-Content-Length: 310
+Content-Length: 367
 
 {
   "id" : 5,
@@ -1337,12 +1362,14 @@ Content-Length: 310
     "publisher" : "출판사",
     "imageUrl" : "책이미지"
   },
-  "writer" : {
-    "id" : "410f8a31-194a-4f18-abf9-93e3bae19bf2",
+  "lender" : {
+    "id" : "9ee90de9-1bb9-404f-838e-79bc8f91924a",
     "name" : "작성자"
   },
+  "borrower" : null,
   "location" : "인천",
-  "endDate" : "2023-02-14"
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
 }</code></pre>
 </div>
 </div>
@@ -1356,21 +1383,22 @@ Content-Length: 310
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /book-borrows HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 290
+Content-Length: 334
 Host: 223.255.205.62:30505
 
 {
   "book" : {
-    "isbn" : "798789789978",
+    "isbn" : "9791188116065",
     "title" : "미움 받을 용기",
     "author" : "독도독도",
     "publisher" : "test_b64e856b1458",
-    "imageUrl" : "aaa.bb.com",
+    "imageUrl" : "http://aaa.bb.com",
     "price" : 62,
-    "publishAt" : "2023-02-14"
+    "publishAt" : "2023-02-27"
   },
   "location" : "인천",
-  "endDate" : "2023-02-14"
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
 }</code></pre>
 </div>
 </div>
@@ -1381,7 +1409,7 @@ Host: 223.255.205.62:30505
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 938
+Content-Length: 1340
 
 [ {
   "id" : 5,
@@ -1392,12 +1420,17 @@ Content-Length: 938
     "publisher" : "출판사",
     "imageUrl" : "책이미지"
   },
-  "writer" : {
-    "id" : "497edb62-5180-4262-ba7c-28b194002a6b",
+  "lender" : {
+    "id" : "0a7fe071-6fc4-4d08-955d-f57a2166fe28",
     "name" : "작성자"
   },
+  "borrower" : {
+    "id" : "50787f84-3942-466c-8afc-a2fa1f6a4718",
+    "name" : "대여자"
+  },
   "location" : "인천",
-  "endDate" : "2023-02-14"
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
 }, {
   "id" : 4,
   "book" : {
@@ -1407,12 +1440,17 @@ Content-Length: 938
     "publisher" : "출판사",
     "imageUrl" : "책이미지"
   },
-  "writer" : {
-    "id" : "458fc968-b4b2-4e1e-b780-47a6773ac406",
+  "lender" : {
+    "id" : "6e9640bc-6f3d-4b8f-a5ec-17c31dac8c82",
     "name" : "작성자"
   },
+  "borrower" : {
+    "id" : "85a9692d-b994-4942-8dab-8e64b60911de",
+    "name" : "대여자"
+  },
   "location" : "인천",
-  "endDate" : "2023-02-14"
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
 }, {
   "id" : 2,
   "book" : {
@@ -1422,12 +1460,17 @@ Content-Length: 938
     "publisher" : "출판사",
     "imageUrl" : "책이미지"
   },
-  "writer" : {
-    "id" : "64af9732-2dc6-4554-8cd4-3622f7fe0a22",
+  "lender" : {
+    "id" : "64e505de-bc1c-4de1-9707-4c8182529080",
     "name" : "작성자"
   },
+  "borrower" : {
+    "id" : "2ccb762f-8965-4f61-bbb0-69fff46c9a6d",
+    "name" : "대여자"
+  },
   "location" : "인천",
-  "endDate" : "2023-02-14"
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
 } ]</code></pre>
 </div>
 </div>
@@ -1441,21 +1484,22 @@ Content-Length: 938
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /book-borrows?book-name=%EC%B1%85%EC%A0%9C%EB%AA%A9 HTTP/1.1
 Content-Type: application/json;charset=UTF-8
-Content-Length: 290
+Content-Length: 334
 Host: 223.255.205.62:30505
 
 {
   "book" : {
-    "isbn" : "798789789978",
+    "isbn" : "9791188116065",
     "title" : "미움 받을 용기",
     "author" : "독도독도",
     "publisher" : "test_b64e856b1458",
-    "imageUrl" : "aaa.bb.com",
+    "imageUrl" : "http://aaa.bb.com",
     "price" : 62,
-    "publishAt" : "2023-02-14"
+    "publishAt" : "2023-02-27"
   },
   "location" : "인천",
-  "endDate" : "2023-02-14"
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
 }</code></pre>
 </div>
 </div>
@@ -1466,7 +1510,7 @@ Host: 223.255.205.62:30505
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 938
+Content-Length: 1340
 
 [ {
   "id" : 5,
@@ -1477,12 +1521,17 @@ Content-Length: 938
     "publisher" : "출판사",
     "imageUrl" : "책이미지"
   },
-  "writer" : {
-    "id" : "57f237ff-632d-4a16-a9fc-fbf77225a3d0",
+  "lender" : {
+    "id" : "6e796cea-7deb-4bc2-908d-f08b290b3b9a",
     "name" : "작성자"
   },
+  "borrower" : {
+    "id" : "27e534fd-0c78-4886-9c88-42a337c9639a",
+    "name" : "대여자"
+  },
   "location" : "인천",
-  "endDate" : "2023-02-14"
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
 }, {
   "id" : 4,
   "book" : {
@@ -1492,12 +1541,17 @@ Content-Length: 938
     "publisher" : "출판사",
     "imageUrl" : "책이미지"
   },
-  "writer" : {
-    "id" : "dd25a75f-3f45-457e-9cb6-e7660c238e30",
+  "lender" : {
+    "id" : "d532825c-f09a-48d0-8da4-aacc8f489730",
     "name" : "작성자"
   },
+  "borrower" : {
+    "id" : "b82a1b70-d30f-4598-b228-df6f43d26e36",
+    "name" : "대여자"
+  },
   "location" : "인천",
-  "endDate" : "2023-02-14"
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
 }, {
   "id" : 2,
   "book" : {
@@ -1507,12 +1561,225 @@ Content-Length: 938
     "publisher" : "출판사",
     "imageUrl" : "책이미지"
   },
-  "writer" : {
-    "id" : "e913f3c2-9c98-487e-bc3c-c66aafd6a647",
+  "lender" : {
+    "id" : "f0d9cf0f-ca34-48e6-b05b-d2a13004be49",
     "name" : "작성자"
   },
+  "borrower" : {
+    "id" : "7257d15f-07bc-4757-9566-61e8fbae1998",
+    "name" : "대여자"
+  },
   "location" : "인천",
-  "endDate" : "2023-02-14"
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
+} ]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_책_대여_신청"><a class="link" href="#_책_대여_신청">책 대여 신청</a></h3>
+<div class="sect3">
+<h4 id="_책_대여_신청_http_request"><a class="link" href="#_책_대여_신청_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /book-borrows/1/borrow HTTP/1.1
+Host: 223.255.205.62:30505</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_책_대여_신청_http_response"><a class="link" href="#_책_대여_신청_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 204 No Content</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_책_반납"><a class="link" href="#_책_반납">책 반납</a></h3>
+<div class="sect3">
+<h4 id="_책_반납_http_request"><a class="link" href="#_책_반납_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">POST /book-borrows/1/return HTTP/1.1
+Host: 223.255.205.62:30505</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_책_반납_http_response"><a class="link" href="#_책_반납_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 204 No Content</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_내가_borrow한_도서_대여_목록_조회"><a class="link" href="#_내가_borrow한_도서_대여_목록_조회">내가 borrow한 도서 대여 목록 조회</a></h3>
+<div class="sect3">
+<h4 id="_내가_borrow한_도서_대여_목록_조회_http_request"><a class="link" href="#_내가_borrow한_도서_대여_목록_조회_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /book-borrows/my-borrow HTTP/1.1
+Host: 223.255.205.62:30505</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_내가_borrow한_도서_대여_목록_조회_http_response"><a class="link" href="#_내가_borrow한_도서_대여_목록_조회_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 1352
+
+[ {
+  "id" : 5,
+  "book" : {
+    "id" : 5,
+    "title" : "책제목",
+    "author" : "작가",
+    "publisher" : "출판사",
+    "imageUrl" : "책이미지"
+  },
+  "lender" : {
+    "id" : "51b64b6c-21c3-4040-bee4-0e5fa76ac640",
+    "name" : "대출자"
+  },
+  "borrower" : {
+    "id" : "24af9a0f-1cdd-4338-babe-c532e6513f78",
+    "name" : "빌린 사람"
+  },
+  "location" : "인천",
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
+}, {
+  "id" : 4,
+  "book" : {
+    "id" : 5,
+    "title" : "책제목",
+    "author" : "작가",
+    "publisher" : "출판사",
+    "imageUrl" : "책이미지"
+  },
+  "lender" : {
+    "id" : "640c3a57-c31e-41bf-8472-379f102ae39f",
+    "name" : "대출자"
+  },
+  "borrower" : {
+    "id" : "24af9a0f-1cdd-4338-babe-c532e6513f78",
+    "name" : "빌린 사람"
+  },
+  "location" : "인천",
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
+}, {
+  "id" : 2,
+  "book" : {
+    "id" : 5,
+    "title" : "책제목",
+    "author" : "작가",
+    "publisher" : "출판사",
+    "imageUrl" : "책이미지"
+  },
+  "lender" : {
+    "id" : "f44574ad-e938-4bf3-bc36-a86c8a458c29",
+    "name" : "대출자"
+  },
+  "borrower" : {
+    "id" : "24af9a0f-1cdd-4338-babe-c532e6513f78",
+    "name" : "빌린 사람"
+  },
+  "location" : "인천",
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
+} ]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_내가_lend한_도서_목록_조회"><a class="link" href="#_내가_lend한_도서_목록_조회">내가 lend한 도서 목록 조회</a></h3>
+<div class="sect3">
+<h4 id="_내가_lend한_도서_목록_조회_http_request"><a class="link" href="#_내가_lend한_도서_목록_조회_http_request">HTTP request</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /book-borrows/my-lend HTTP/1.1
+Host: 223.255.205.62:30505</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_내가_lend한_도서_목록_조회_http_response"><a class="link" href="#_내가_lend한_도서_목록_조회_http_response">HTTP response</a></h4>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
+Content-Type: application/json;charset=UTF-8
+Content-Length: 1340
+
+[ {
+  "id" : 5,
+  "book" : {
+    "id" : 5,
+    "title" : "책제목",
+    "author" : "작가",
+    "publisher" : "출판사",
+    "imageUrl" : "책이미지"
+  },
+  "lender" : {
+    "id" : "f06b2097-b33c-479c-8274-105155e3309f",
+    "name" : "작성자"
+  },
+  "borrower" : {
+    "id" : "5cf13513-d015-4dfb-816e-100be8ff1c71",
+    "name" : "대여자"
+  },
+  "location" : "인천",
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
+}, {
+  "id" : 4,
+  "book" : {
+    "id" : 5,
+    "title" : "책제목",
+    "author" : "작가",
+    "publisher" : "출판사",
+    "imageUrl" : "책이미지"
+  },
+  "lender" : {
+    "id" : "f06b2097-b33c-479c-8274-105155e3309f",
+    "name" : "작성자"
+  },
+  "borrower" : {
+    "id" : "3e67a526-b0e4-431e-a3bd-4b2dc49639e6",
+    "name" : "대여자"
+  },
+  "location" : "인천",
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
+}, {
+  "id" : 2,
+  "book" : {
+    "id" : 5,
+    "title" : "책제목",
+    "author" : "작가",
+    "publisher" : "출판사",
+    "imageUrl" : "책이미지"
+  },
+  "lender" : {
+    "id" : "f06b2097-b33c-479c-8274-105155e3309f",
+    "name" : "작성자"
+  },
+  "borrower" : {
+    "id" : "1ab9f914-755f-4102-8ba8-eb62de950527",
+    "name" : "대여자"
+  },
+  "location" : "인천",
+  "endDate" : "2023-02-27",
+  "kakaoUrl" : "http://aaa.bb.com"
 } ]</code></pre>
 </div>
 </div>
@@ -1580,31 +1847,31 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 707
 
 [ {
-  "id" : "f2623605-9453-49e4-8fa8-c144239cba78",
+  "id" : "a3e927ec-799d-40b3-94c4-560462607ce1",
   "name" : "이름",
   "grade" : 2,
   "major" : "COMPUTER",
   "profileUrl" : "profile"
 }, {
-  "id" : "d3672d9e-0f6b-4a27-9f6d-35a826d0965a",
+  "id" : "2e5972b9-b8ee-40e8-b91a-2c2d7e4409fc",
   "name" : "이름",
   "grade" : 2,
   "major" : "COMPUTER",
   "profileUrl" : "profile"
 }, {
-  "id" : "dd363cc4-d2f6-48c8-b823-113c8c9daecd",
+  "id" : "fcca7390-92d4-4f77-9e60-2e94919aeb0b",
   "name" : "이름",
   "grade" : 2,
   "major" : "COMPUTER",
   "profileUrl" : "profile"
 }, {
-  "id" : "aa050ce7-84b9-43f2-bf2c-979eadec3f8e",
+  "id" : "e59a98e9-6ee0-4f04-b83c-e71c511d6bd4",
   "name" : "이름",
   "grade" : 2,
   "major" : "COMPUTER",
   "profileUrl" : "profile"
 }, {
-  "id" : "d262675a-c6d8-486c-b3dc-c82611031a53",
+  "id" : "333dc88f-8df1-44ba-babc-2b552e19996f",
   "name" : "이름",
   "grade" : 2,
   "major" : "COMPUTER",
@@ -1620,7 +1887,7 @@ Content-Length: 707
 <h4 id="_유저_단일_조회_http_request"><a class="link" href="#_유저_단일_조회_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /members/2cbd9073-cae2-4565-85a5-19adb2e8bb8b HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /members/23722509-33e2-4e9e-8c00-45fad8d41e77 HTTP/1.1
 Host: 223.255.205.62:30505</code></pre>
 </div>
 </div>
@@ -1634,7 +1901,7 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 273
 
 {
-  "id" : "215b4b4e-3bb6-4b23-ab90-16e8f90733d9",
+  "id" : "f4f939d7-bd6c-44ca-a54a-f698fa7f984c",
   "name" : "이름",
   "grade" : 2,
   "major" : "COMPUTER",
@@ -1654,7 +1921,7 @@ Content-Length: 273
 <h4 id="_유저_개인_정보_포함_조회_http_request"><a class="link" href="#_유저_개인_정보_포함_조회_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /members/715f6dbb-0706-4d9b-87f2-b91b3070c1fe/privacy HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /members/c041ee77-01f2-47f0-ade8-9e5cb544b551/privacy HTTP/1.1
 Host: 223.255.205.62:30505</code></pre>
 </div>
 </div>
@@ -1668,7 +1935,7 @@ Content-Type: application/json;charset=UTF-8
 Content-Length: 338
 
 {
-  "id" : "758ef709-7370-4d7a-a6c8-f9bbaffb7b51",
+  "id" : "ff370c30-2459-4520-828b-26ae41fca7af",
   "name" : "이름",
   "grade" : 2,
   "major" : "COMPUTER",
@@ -1703,8 +1970,8 @@ Host: 223.255.205.62:30505
 {
   "name" : "봄나물",
   "description" : "스프링 기초 스터디 핵심원리편",
-  "leader" : "cea458e9-27ce-4922-9869-05d192e5fb05",
-  "members" : [ "58ee571d-dbf4-4b4a-8dab-c9d128d82be7", "6dfc5d05-68ea-4d2c-a0a8-2c2258eabf87", "c24d6c7e-c8f4-49c3-a912-8c633424ca3e", "8796983e-926b-4070-af1a-157133de4ca4" ]
+  "leader" : "e09ccc96-349d-472a-8aa9-8ad29a65da8e",
+  "members" : [ "b05f247b-cf39-487d-8470-f50337f0c1e7", "4668cf31-7081-4368-a30a-16ff9e2bf791", "6609ccbf-a7e9-4bed-b748-4529df21b02b", "26994ad0-e8a7-4250-8f6d-de48b086d441" ]
 }</code></pre>
 </div>
 </div>
@@ -1738,8 +2005,8 @@ Host: 223.255.205.62:30505
 {
   "name" : "봄나물",
   "description" : "스프링 기초 스터디 핵심원리편",
-  "leader" : "cea458e9-27ce-4922-9869-05d192e5fb05",
-  "members" : [ "58ee571d-dbf4-4b4a-8dab-c9d128d82be7", "6dfc5d05-68ea-4d2c-a0a8-2c2258eabf87", "c24d6c7e-c8f4-49c3-a912-8c633424ca3e", "8796983e-926b-4070-af1a-157133de4ca4" ]
+  "leader" : "e09ccc96-349d-472a-8aa9-8ad29a65da8e",
+  "members" : [ "b05f247b-cf39-487d-8470-f50337f0c1e7", "4668cf31-7081-4368-a30a-16ff9e2bf791", "6609ccbf-a7e9-4bed-b748-4529df21b02b", "26994ad0-e8a7-4250-8f6d-de48b086d441" ]
 }</code></pre>
 </div>
 </div>
@@ -1863,15 +2130,15 @@ Content-Length: 420
   "likeCount" : 100,
   "studyGroupStatus" : "ACTIVE",
   "leader" : {
-    "id" : "eceade90-5882-4221-b888-519d6e5b0852",
+    "id" : "a941fc61-f36a-4b2b-a599-2b1787df87a0",
     "name" : "리더"
   },
   "members" : [ {
-    "id" : "789ae142-db22-4c27-8519-f39e28a91acb",
-    "name" : "멤버1"
-  }, {
-    "id" : "a194c9ea-dab0-422c-820e-55d82a801253",
+    "id" : "d80d68e4-48ca-4b4a-af1f-ab00e7d0c4b9",
     "name" : "멤버2"
+  }, {
+    "id" : "8d197ff0-1347-4408-892a-aef0c1b5af6a",
+    "name" : "멤버1"
   } ]
 }</code></pre>
 </div>
@@ -1904,15 +2171,15 @@ Content-Length: 847
   "likeCount" : 100,
   "studyGroupStatus" : "ACTIVE",
   "leader" : {
-    "id" : "eceade90-5882-4221-b888-519d6e5b0852",
+    "id" : "a941fc61-f36a-4b2b-a599-2b1787df87a0",
     "name" : "리더"
   },
   "members" : [ {
-    "id" : "789ae142-db22-4c27-8519-f39e28a91acb",
-    "name" : "멤버1"
-  }, {
-    "id" : "a194c9ea-dab0-422c-820e-55d82a801253",
+    "id" : "d80d68e4-48ca-4b4a-af1f-ab00e7d0c4b9",
     "name" : "멤버2"
+  }, {
+    "id" : "8d197ff0-1347-4408-892a-aef0c1b5af6a",
+    "name" : "멤버1"
   } ]
 }, {
   "name" : "쿠버네티스 스터디",
@@ -1920,15 +2187,15 @@ Content-Length: 847
   "likeCount" : 50,
   "studyGroupStatus" : "ACTIVE",
   "leader" : {
-    "id" : "ed304007-3e87-4cdb-94e5-4257e4b2dabb",
+    "id" : "21ce804f-1406-439a-8d96-113cfbdbb80d",
     "name" : "leader"
   },
   "members" : [ {
-    "id" : "12163054-a151-41e6-9098-4f958fe1dd62",
-    "name" : "멤버11"
-  }, {
-    "id" : "af8f2b38-fe00-4275-b75b-0899ca7d1b08",
+    "id" : "b31daba1-86e9-4055-bceb-f798a8d21aed",
     "name" : "멤버22"
+  }, {
+    "id" : "424e6ce2-70d8-44af-9d3f-42f38a8a7f25",
+    "name" : "멤버11"
   } ]
 } ]</code></pre>
 </div>
@@ -1961,15 +2228,15 @@ Content-Length: 847
   "likeCount" : 100,
   "studyGroupStatus" : "ACTIVE",
   "leader" : {
-    "id" : "eceade90-5882-4221-b888-519d6e5b0852",
+    "id" : "a941fc61-f36a-4b2b-a599-2b1787df87a0",
     "name" : "리더"
   },
   "members" : [ {
-    "id" : "789ae142-db22-4c27-8519-f39e28a91acb",
-    "name" : "멤버1"
-  }, {
-    "id" : "a194c9ea-dab0-422c-820e-55d82a801253",
+    "id" : "d80d68e4-48ca-4b4a-af1f-ab00e7d0c4b9",
     "name" : "멤버2"
+  }, {
+    "id" : "8d197ff0-1347-4408-892a-aef0c1b5af6a",
+    "name" : "멤버1"
   } ]
 }, {
   "name" : "쿠버네티스 스터디",
@@ -1977,15 +2244,15 @@ Content-Length: 847
   "likeCount" : 50,
   "studyGroupStatus" : "ACTIVE",
   "leader" : {
-    "id" : "ed304007-3e87-4cdb-94e5-4257e4b2dabb",
+    "id" : "21ce804f-1406-439a-8d96-113cfbdbb80d",
     "name" : "leader"
   },
   "members" : [ {
-    "id" : "12163054-a151-41e6-9098-4f958fe1dd62",
-    "name" : "멤버11"
-  }, {
-    "id" : "af8f2b38-fe00-4275-b75b-0899ca7d1b08",
+    "id" : "b31daba1-86e9-4055-bceb-f798a8d21aed",
     "name" : "멤버22"
+  }, {
+    "id" : "424e6ce2-70d8-44af-9d3f-42f38a8a7f25",
+    "name" : "멤버11"
   } ]
 } ]</code></pre>
 </div>
@@ -2018,15 +2285,15 @@ Content-Length: 847
   "likeCount" : 100,
   "studyGroupStatus" : "ACTIVE",
   "leader" : {
-    "id" : "eceade90-5882-4221-b888-519d6e5b0852",
+    "id" : "a941fc61-f36a-4b2b-a599-2b1787df87a0",
     "name" : "리더"
   },
   "members" : [ {
-    "id" : "789ae142-db22-4c27-8519-f39e28a91acb",
-    "name" : "멤버1"
-  }, {
-    "id" : "a194c9ea-dab0-422c-820e-55d82a801253",
+    "id" : "d80d68e4-48ca-4b4a-af1f-ab00e7d0c4b9",
     "name" : "멤버2"
+  }, {
+    "id" : "8d197ff0-1347-4408-892a-aef0c1b5af6a",
+    "name" : "멤버1"
   } ]
 }, {
   "name" : "쿠버네티스 스터디",
@@ -2034,15 +2301,15 @@ Content-Length: 847
   "likeCount" : 50,
   "studyGroupStatus" : "ACTIVE",
   "leader" : {
-    "id" : "ed304007-3e87-4cdb-94e5-4257e4b2dabb",
+    "id" : "21ce804f-1406-439a-8d96-113cfbdbb80d",
     "name" : "leader"
   },
   "members" : [ {
-    "id" : "12163054-a151-41e6-9098-4f958fe1dd62",
-    "name" : "멤버11"
-  }, {
-    "id" : "af8f2b38-fe00-4275-b75b-0899ca7d1b08",
+    "id" : "b31daba1-86e9-4055-bceb-f798a8d21aed",
     "name" : "멤버22"
+  }, {
+    "id" : "424e6ce2-70d8-44af-9d3f-42f38a8a7f25",
+    "name" : "멤버11"
   } ]
 } ]</code></pre>
 </div>
@@ -2071,11 +2338,11 @@ Host: 223.255.205.62:30505
   "assignment" : "1단원 연습 문제",
   "week" : 1,
   "place" : "보보스 1호점",
-  "activityMembers" : [ "ba8ac0ca-a73e-4a30-9aba-df5b0942a69f", "ed90b7ad-55b3-4b60-be53-7eb48153101e", "f6bcd6ae-945e-4813-b960-bb8802578308" ],
+  "activityMembers" : [ "a6b83fc0-085c-4f69-a0a7-04874acd5cbe", "20dbac61-42e8-42d8-90a2-008af43fa985", "05961ae1-94c7-480a-a17a-505c345aaa57" ],
   "studyGroupId" : 1,
   "studyTime" : {
-    "startTime" : "2023-02-14T09:39:13",
-    "endTime" : "2023-02-14T11:39:13"
+    "startTime" : "2023-02-27T09:35:32",
+    "endTime" : "2023-02-27T11:35:32"
   }
 }</code></pre>
 </div>
@@ -2113,11 +2380,11 @@ Host: 223.255.205.62:30505
   "assignment" : "1단원 연습 문제",
   "week" : 1,
   "place" : "보보스 1호점",
-  "activityMembers" : [ "ba8ac0ca-a73e-4a30-9aba-df5b0942a69f", "ed90b7ad-55b3-4b60-be53-7eb48153101e", "f6bcd6ae-945e-4813-b960-bb8802578308" ],
+  "activityMembers" : [ "a6b83fc0-085c-4f69-a0a7-04874acd5cbe", "20dbac61-42e8-42d8-90a2-008af43fa985", "05961ae1-94c7-480a-a17a-505c345aaa57" ],
   "studyGroupId" : 1,
   "studyTime" : {
-    "startTime" : "2023-02-14T09:39:13",
-    "endTime" : "2023-02-14T11:39:13"
+    "startTime" : "2023-02-27T09:35:32",
+    "endTime" : "2023-02-27T11:35:32"
   }
 }</code></pre>
 </div>
@@ -2171,7 +2438,7 @@ Host: 223.255.205.62:30505</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 436
+Content-Length: 476
 
 {
   "title" : "k8s 스터디",
@@ -2180,15 +2447,17 @@ Content-Length: 436
   "week" : 4,
   "place" : "종합관 2층 스터디룸",
   "studyTime" : {
-    "startTime" : "2023-02-14T09:39:13",
-    "endTime" : "2023-02-14T11:39:13"
+    "startDate" : "2023-02-27",
+    "startTime" : "09:35:32",
+    "endDate" : "2023-02-27",
+    "endTime" : "11:35:32"
   },
   "activityMembers" : [ {
-    "id" : "59a6118e-554c-466b-962d-40c9bc1bd872",
-    "name" : "Kim"
-  }, {
-    "id" : "376a6a11-1d88-4809-8e12-b849c8bb0b52",
+    "id" : "23c2d655-6ad1-418d-9c2c-6e04fcd7c8c6",
     "name" : "Lee"
+  }, {
+    "id" : "67c35b77-e6a2-46b2-a299-cc8abfd29cbb",
+    "name" : "Kim"
   } ]
 }</code></pre>
 </div>
@@ -2213,7 +2482,7 @@ Host: 223.255.205.62:30505</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 886
+Content-Length: 966
 
 [ {
   "title" : "k8s 스터디",
@@ -2222,15 +2491,17 @@ Content-Length: 886
   "week" : 4,
   "place" : "종합관 2층 스터디룸",
   "studyTime" : {
-    "startTime" : "2023-02-14T09:39:13",
-    "endTime" : "2023-02-14T11:39:13"
+    "startDate" : "2023-02-27",
+    "startTime" : "09:35:32",
+    "endDate" : "2023-02-27",
+    "endTime" : "11:35:32"
   },
   "activityMembers" : [ {
-    "id" : "59a6118e-554c-466b-962d-40c9bc1bd872",
-    "name" : "Kim"
-  }, {
-    "id" : "376a6a11-1d88-4809-8e12-b849c8bb0b52",
+    "id" : "23c2d655-6ad1-418d-9c2c-6e04fcd7c8c6",
     "name" : "Lee"
+  }, {
+    "id" : "67c35b77-e6a2-46b2-a299-cc8abfd29cbb",
+    "name" : "Kim"
   } ]
 }, {
   "title" : "리액트 스터디",
@@ -2239,15 +2510,17 @@ Content-Length: 886
   "week" : 1,
   "place" : "E동2층",
   "studyTime" : {
-    "startTime" : "2023-02-14T09:39:13",
-    "endTime" : "2023-02-14T11:39:13"
+    "startDate" : "2023-02-27",
+    "startTime" : "09:35:32",
+    "endDate" : "2023-02-27",
+    "endTime" : "11:35:32"
   },
   "activityMembers" : [ {
-    "id" : "0ae35145-ac23-4dff-8291-f3c715461f0c",
-    "name" : "Park"
-  }, {
-    "id" : "67ba36ba-4ebb-4355-b655-68121aa8904d",
+    "id" : "6e197c76-6d78-4697-a197-1c6015a59f81",
     "name" : "Hong"
+  }, {
+    "id" : "a5032ce3-8663-4f07-8aaf-5c7eaa55df71",
+    "name" : "Park"
   } ]
 } ]</code></pre>
 </div>
@@ -2400,11 +2673,12 @@ Host: 223.255.205.62:30505
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: application/json;charset=UTF-8
-Content-Length: 151
+Content-Length: 146
 
 {
+  "id" : 1,
   "filename" : "plan.docx",
-  "downloadUri" : "http://localhost:8080/api/v1/files?filename=plan.docx",
+  "downloadUri" : "http://localhost:8080/api/v1/files/1",
   "contentType" : "docx",
   "fileSize" : 100
 }</code></pre>
@@ -2418,7 +2692,7 @@ Content-Length: 151
 <h4 id="_파일_다운로드_http_request"><a class="link" href="#_파일_다운로드_http_request">HTTP request</a></h4>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /files?filename=plan.docx HTTP/1.1
+<pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">GET /files/1 HTTP/1.1
 Content-Type: multipart/form-data;charset=UTF-8
 Host: 223.255.205.62:30505</code></pre>
 </div>
@@ -2430,7 +2704,7 @@ Host: 223.255.205.62:30505</code></pre>
 <div class="content">
 <pre class="highlightjs highlight nowrap"><code class="language-http hljs" data-lang="http">HTTP/1.1 200 OK
 Content-Type: multipart/form-data;charset=UTF-8
-Content-Disposition: attachment; filename*=UTF-8''plan.docx
+Content-Disposition: attachment; filename*=UTF-8''file.docx
 Accept-Ranges: bytes
 Content-Length: 1</code></pre>
 </div>
@@ -2442,7 +2716,7 @@ Content-Length: 1</code></pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2023-02-14 11:40:24 +0900
+Last updated 2023-02-14 11:42:36 +0900
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
