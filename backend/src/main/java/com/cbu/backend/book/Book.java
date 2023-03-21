@@ -35,7 +35,6 @@ public class Book {
 
     @Builder
     public Book(
-            Long id,
             String title,
             String author,
             String publisher,
@@ -44,7 +43,6 @@ public class Book {
             LocalDate publishAt,
             Member register,
             String isbn) {
-        this.id = id;
         this.title = title;
         this.author = author;
         this.publisher = publisher;
