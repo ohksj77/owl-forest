@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("study-groups")
 @RequiredArgsConstructor
@@ -23,13 +25,13 @@ public class StudyGroupController {
 
     @PostMapping
     public ResponseEntity<IdResponse<Long>> saveStudyGroup(
-            @RequestBody StudyGroupRequest studyGroupRequest) {
+            @RequestBody @Valid StudyGroupRequest studyGroupRequest) {
         return ResponseEntity.ok(studyGroupService.saveStudyGroup(studyGroupRequest));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Void> putStudyGroup(
-            @PathVariable Long id, @RequestBody StudyGroupRequest studyGroupRequest) {
+            @PathVariable Long id, @RequestBody @Valid StudyGroupRequest studyGroupRequest) {
         studyGroupService.updateStudyGroup(id, studyGroupRequest);
         return ResponseEntity.ok().build();
     }

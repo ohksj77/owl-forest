@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 @RestController
 @RequestMapping("study-activities")
 @RequiredArgsConstructor
@@ -20,13 +22,13 @@ public class StudyActivityController {
 
     @PostMapping
     public ResponseEntity<IdResponse<Long>> saveStudyActivity(
-            @RequestBody StudyActivityRequest studyActivityRequest) {
+            @RequestBody @Valid StudyActivityRequest studyActivityRequest) {
         return ResponseEntity.ok(studyActivityService.saveStudyActivity(studyActivityRequest));
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Void> putStudyActivity(
-            @PathVariable Long id, @RequestBody StudyActivityRequest studyActivityRequest) {
+            @PathVariable Long id, @RequestBody @Valid StudyActivityRequest studyActivityRequest) {
         studyActivityService.updateStudyActivity(id, studyActivityRequest);
         return ResponseEntity.ok().build();
     }
